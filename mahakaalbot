@@ -1,0 +1,53 @@
+#!/bin/bash
+
+
+_get_repolink () {
+    local regex
+    regex='(https?)://github.com/.+/.+'
+    if [[ $MAHAKAAL_REPO == "mahakaalbot" ]]
+    then
+        echo "aHR0cHM6Ly9naXRodWIuY29tL000SDRLQTRML01BSEFLQUFMLVVTRVJCT1QvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
+    elif [[ $MAHAKAAL_REPO == "MAHAKAALBOT" ]]
+    then
+        echo "aHR0cHM6Ly9naXRodWIuY29tL000SDRLQTRML01BSEFLQUFMLVVTRVJCT1QvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
+    elif [[ $MAHAKAAL_REPO =~ $regex ]]
+    then
+        if [[ $MAHAKAAL_REPO_BRANCH ]]
+        then
+            echo "${MAHAKAAL_REPO}/archive/${MAHAKAAL_REPO_BRANCH}.zip"
+        else
+            echo "${MAHAKAAL_REPO}/archive/master.zip"
+        fi
+    else
+        echo "aHR0cHM6Ly9naXRodWIuY29tL000SDRLQTRML01BSEFLQUFMLVVTRVJCT1QvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
+    fi
+}
+
+
+_set_bot () {
+    local zippath
+    zippath="mahakaalbot.zip"
+    echo "  Downloading source code ..."
+    wget -q $(_get_repolink) -O "$zippath"
+    echo "  Unpacking Data ..."
+    MAHAKAALPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
+    unzip -qq "$zippath"
+    echo "Done"
+    echo "  Cleaning ..."
+    rm -rf "$zippath"
+    sleep 5
+    cd $MAHAKAALPATH
+    echo "    Starting MahakaalBot    "
+    echo "
+                          
+                     ╭━┳━┳━━┳╮╭┳━━┳┳┳━━┳━━┳╮╭━━┳━┳━━╮
+                     ┃┃┃┃┃╭╮┃╰╯┃╭╮┃╭┫╭╮┃╭╮┃┃┃╭╮┃┃┣╮╭╯
+                     ┃┃┃┃┃┣┫┃╭╮┃┣┫┃╰┫┣┫┃┣┫┃╰┫╭╮┃┃┃┃┃
+                     ╰┻━┻┻╯╰┻╯╰┻╯╰┻┻┻╯╰┻╯╰┻━┻━━┻━╯╰╯
+    "
+
+    python3 ./setup/updater.py ./requirements.txt requirements.txt
+    python3 -m userbot
+}
+
+_set_bot
