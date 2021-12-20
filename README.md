@@ -6,11 +6,11 @@
 
 
 
-# 𝗧𝗵𝗲 𝗠𝗔𝗛𝗔𝗞𝗔𝗔𝗟𝗕𝗢𝗧
+# ᴛʜᴇ ᴍᴀʜᴀᴋᴀᴀʟʙᴏᴛ
 This is a userbot made for telegram. I made this userbot with help of all other userbots available in telegram. All credits goes to its Respective Owners....
 
 MahakaalBot made by @Belongs_to_Lord_Shiva_nd_Haryana. Supported by respective hellbot owner @Kraken_The_Badass. Join for update related info channel and group :- https://t.me/Official_MahakaalBot_Support THANKS FOR VISITING OUR REPO💖
-[![MAHAKAALBOT LOGO](https://telegra.ph/file/75229ba894ef780332815.jpg)](https://t.me/Official_MahakaalBot_Support)
+[![MAHAKAALBOT LOGO](https://telegra.ph/file/9967bb61bb287b1753ce2.jpg)](https://t.me/Official_MahakaalBot_Support)
 
 
 # The owner would not be responsible for any kind of bans due to the bot...

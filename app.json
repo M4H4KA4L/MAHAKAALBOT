@@ -1,5 +1,5 @@
 {
-  "name": "𝑇ℎ𝑒 𝑀𝑎ℎ𝑎𝑘𝑎𝑎𝑙𝐵𝑜𝑡",
+  "name": "ᴛʜᴇ ᴍᴀʜᴀᴋᴀᴀʟʙᴏᴛ",
   "description": "The MahakaalBot made by @Belongs_to_Lord_Shiva_nd_Haryana special thanks to respective HellBot owner @Kraken_The_BadASS. Join for updates related info @Official_MahakaalBot_Support",
   "logo": "https://telegra.ph/file/9967bb61bb287b1753ce2.jpg",
     "keywords": [
@@ -39,7 +39,7 @@
     },
     "ALIVE_PIC": {
       "description": "Put here any telegraph media link for alive pic in .mahakaal command.",
-      "value": "https://telegra.ph/file/63c3da961d4bd91d7f367.mp4",
+      "value": "https://telegra.ph/file/f1c4238435c77fdeb6704.mp4",
       "required": false
     },
     "BIO_MSG": {
@@ -49,7 +49,7 @@
     },
     "PMPERMIT_PIC": {
       "description": "put here any telegraph media link for custom pmpermit pic.",
-      "value": "https://telegra.ph/file/502d3b7372c1c395bba5a.mp4",
+      "value": "https://telegra.ph/file/f1c4238435c77fdeb6704.mp4",
       "required": true
     },
     "CUSTOM_PMPERMIT": {
